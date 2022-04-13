@@ -1,0 +1,11 @@
+name: CellSurvAssay-App
+title:
+username:
+account: pickeringlab
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6085692
+bundleId: 5796059
+url: https://pickeringlab.shinyapps.io/CellSurvAssay-App/
+when: 1649882242.21688
+lastSyncTime: 1649882242.21688
