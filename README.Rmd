@@ -3,8 +3,19 @@ title: "CellSurvAssay-App"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+```{r, echo=FALSE, out.width="200%", out.height="200%"}
+knitr::include_graphics("www/CellSurvAssay.png")
 ```
 
 ## CellSurvAssay

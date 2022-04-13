@@ -1,6 +1,8 @@
 CellSurvAssay-App
 ================
 
+<img src="www/CellSurvAssay.png" width="200%" height="200%" />
+
 ## CellSurvAssay
 
 CellSurvAssay consists of a couple of tools that can be used to perform
