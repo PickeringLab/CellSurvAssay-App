@@ -588,7 +588,7 @@ ui <- function(request) {
                                              hr(),
                                              p(strong("CellSurvAssay"), " consists of a couple of tools that can be used to perform Clonogenic Survival Analysis in R very easily and efficiently. These two tools are:"),
                                              p("1. ", em("CellSurvAssay R package"), ": This helps even beginner R users to perform the analysis in R, while maintaining the flexibility of a package. To know more details about the R package, visit ", a(href = "https://pickeringlab.github.io/CellSurvAssay/", "here"), "."),
-                                             p("2. ", em("CellSurvAssay Shiny app"), ": This is a web application that helps users with no experience in R to perform the analysis, in R. The app is based on the CellSurvAssay R package and can be accessed ", a(href = "https://pickeringlab.github.io/CellSurvAssay/", "here"), "."),
+                                             p("2. ", em("CellSurvAssay Shiny app"), ": This is a web application that helps users with no experience in R to perform the analysis, in R. The app is based on the CellSurvAssay R package and can be accessed ", a(href = "https://pickeringlab.shinyapps.io/CellSurvAssay-App/", "here"), "."),
                                              hr(),
                                              h4("Purpose of the CellSurvAssay Shiny App"),
                                              hr(),
