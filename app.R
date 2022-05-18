@@ -414,7 +414,11 @@ ui <- function(request) {
                            numericInput("surv_frac", "Enter the survival fraction:", value = 0.25, min = 0, max = 1, step = 0.01),
                            h4("Choose methods"),
                            radioButtons("der_method", "Method for estimating parameters", choices = method_codes, inline = FALSE),
-                           radioButtons("der_pemethod", "Method for calculating plating efficiency", choices = pemethod_codes, inline = FALSE)
+                           radioButtons("der_pemethod", "Method for calculating plating efficiency", choices = pemethod_codes, inline = FALSE),
+                           fluidRow(
+                             column(4, offset = 8,
+                                    downloadButton("der_results", "Download", icon = icon("angle-double-down"), class = "btn-lrg", width = "100%",
+                                                   style = "color: white; background-color: steelblue")))
                          ),
                          mainPanel(
                            verbatimTextOutput("der")
@@ -772,6 +776,16 @@ server <- function(input, output, session) {
       req(input$der_cline1)
       req(input$der_cline2)
       calculateDER(datainput(), input$der_cline1, input$der_cline2, method = input$der_method, PEmethod = input$der_pemethod, S = input$surv_frac)
+    })
+  
+  
+  output$der_results <- downloadHandler(
+    filename = function() {
+      paste(input$der_cline1, "_", input$der_cline2, "_", input$surv_frac, ".txt", sep = "")
+    },
+    content = function(file) {
+      der_output <- capture.output(calculateDER(datainput(), input$der_cline1, input$der_cline2, S = input$surv_frac, method = input$der_method, PEmethod = input$der_pemethod))
+      writeLines(paste(der_output, sep = "\n"), file)
     })
   
   extract_breaks <- function(text) {
