@@ -576,10 +576,10 @@ ui <- function(request) {
                                              p("1. ", em("After importing your data, you get an error message '", strong("Error! Your column names don't match with the requirements! Please check the left panel or Help page for the data format necessary for the analysis."), "':")),
                                              p("This means that one or more of the column names in your data don't match with the required column names. Please refer to the help page of 'Import Data' for more details regarding that."),
                                              br(),
-                                             p("2. ", em("The app suddenly crashes and you get a message '", strong("An error occurred. Hint: Check format of uploaded data. Please refresh the page and try again."), em("':"))),
+                                             p("2. ", em("The app suddenly crashes and you get a message '", strong("An error occurred. Please refresh the page and try again."), em("':"))),
                                              p("This means that your app encountered something that caused it to disconnect from the server.
-                                               Unfortunately, Shiny sometimes behaves this way when it encounters an error. It's very likely that the column names in your data don't match with the required ones. If that's the case, rectifying the column names should do the trick. The ", strong("Import Data"), " page should have provided an error message as well, if that's the case. 
-                                               Please refer to the ", strong("Help"), " pages for more details."),
+                                               Unfortunately, Shiny sometimes behaves this way when it encounters an error. It's likely that the column names in your data don't match with the required ones. If that's the case, rectifying the column names should do the trick. The ", strong("Import Data"), " page should have provided an error message as well, if that's the case. 
+                                               Please refer to the ", strong("Help"), " pages for more details regarding this. You also might get this message if the app disconnects from the server, which mostly occurs due to idle time-out. If that's the case, then unfortunately you have to refresh the app and start afresh."),
                                              br(),
                                              p("3. ", em("While plotting the CS curves, you get an error message '", strong("Insufficient values in manual scale. x needed but only y provided."), em("':"))),
                                              p("It's quite likely that the number of colors you have chosen is less than the number of cell types you have selected. Once the numbers match, you should be good to go."))
@@ -616,7 +616,7 @@ ui <- function(request) {
                                              hr(),
                                              h4("Authors and Maintainers"),
                                              hr(),
-                                             p("Arunangshu Sarkar, B.D.S., M.S.", a(href = 'mailto:arunangshu.sarkar@ucdenver.edu?subject=CellSurvAssay-App', "[email Arunangshu]")),
+                                             p("Arunangshu Sarkar, B.D.S., M.S.", a(href = 'mailto:arunangshu.sarkar@cuanschutz.edu?subject=CellSurvAssay-App', "[email Arunangshu]")),
                                              p("Curtis Pickering, Ph.D. ", a(href = 'mailto:CRPickering@mdanderson.org?subject=CellSurvAssay-App', "[email Curtis]")),
                                              br(),
                                              hr(),
